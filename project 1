@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="developer" content="معز رمضاني - Mouez Romdhani">
+    <title>GamePal - منصة الألعاب الذكية المستقلة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        :root { --primary: #8A2BE2; --secondary: #00D4FF; --dark: #1A1A2E; --darker: #0F0F1B; }
+        body { background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 50%, var(--primary) 100%); min-height: 100vh; color: white; }
+        
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 30px; background: rgba(0, 0, 0, 0.8); }
+        .logo-text { font-size: 1.8em; font-weight: 800; background: linear-gradient(45deg, white, var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        .hero-section { text-align: center; padding: 80px 20px 60px; }
+        .hero-title { font-size: 3.5em; font-weight: 900; margin-bottom: 20px; background: linear-gradient(45deg, white, var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        .platform-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; max-width: 800px; margin: 40px auto; }
+        .platform-card { background: rgba(255, 255, 255, 0.08); border-radius: 15px; padding: 25px 15px; text-align: center; transition: all 0.3s ease; }
+        
+        .primary-btn { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; border: none; padding: 18px 40px; border-radius: 50px; font-size: 1.2em; cursor: pointer; margin: 10px; }
+        
+        @media (max-width: 768px) { .hero-title { font-size: 2.5em; } .platform-grid { grid-template-columns: repeat(3, 1fr); } }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-text">GamePal</div>
+        </div>
+    </nav>
+    
+    <section class="hero-section">
+        <div class="hero-badge">🌟 منصة مستقلة متعددة المنصات</div>
+        <h1 class="hero-title">مساعد الألعاب الذكي<br><span style="font-size: 0.7em;">لجميع المنصات والألعاب</span></h1>
+        <p class="hero-subtitle">GamePal منصة مستقلة تتكامل مع جميع منصات الألعاب. لا حاجة لاختيار منصة واحدة!</p>
+
+        <div class="platform-grid">
+            <div class="platform-card"><div class="platform-icon">🎯</div><div class="platform-name">Steam</div></div>
+            <div class="platform-card"><div class="platform-icon">⚡</div><div class="platform-name">Epic Games</div></div>
+            <div class="platform-card"><div class="platform-icon">🎮</div><div class="platform-name">Xbox</div></div>
+            <div class="platform-card"><div class="platform-icon">📀</div><div class="platform-name">PlayStation</div></div>
+        </div>
+        
+        <div class="hero-buttons">
+            <button class="primary-btn" onclick="startFreeTrial()"><i class="fas fa-rocket"></i> ابدأ مجاناً</button>
+            <button class="secondary-btn" onclick="showDemoVideo()"><i class="fas fa-play"></i> شاهد الفيديو</button>
+        </div>
+    </section>
+
+    <script>
+        function startFreeTrial() { alert('🚀 ابدأ تجربتك المجانية!'); }
+        function showDemoVideo() { alert('🎥 عرض الفيديو التوضيحي'); }
+    </script>
+</body>
+</html>
